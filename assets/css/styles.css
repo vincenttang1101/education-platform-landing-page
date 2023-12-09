@@ -7,6 +7,7 @@
   --secondary-color: #5f5b53;
   --third-color: #fff;
   --fourth-color: #fffcf4;
+  --font-heading: "Sen", sans-serif;
 }
 
 html {
@@ -16,7 +17,6 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
-  font-family: "Sen", sans-serif;
   height: 10000px;
 }
 
@@ -41,6 +41,15 @@ a {
   text-align: center;
   font-size: 1.6rem;
   font-weight: 600;
+}
+
+.heading {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
 }
 
 /* ======= Header ======= */
@@ -196,10 +205,52 @@ a {
   width: 52%;
 }
 
-strong {
-  background: green;
-  color: red;
-  float: right;
-  padding: 20px;
-  margin-top: 20px;
+.hero .content-block > .desc {
+  margin-top: 22px;
+  color: var(--secondary-color);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.66;
+}
+
+.hero .content-block .cta-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 38px;
+}
+
+.hero .content-block .see-courses-btn {
+  min-width: 180px;
+  padding: 17px 34px;
+  border-radius: 32px;
+  color: #fff;
+  background: #ffb900;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.66;
+}
+
+.hero .content-block .see-courses-btn {
+}
+
+.hero .content-block button.watch-video {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hero .content-block .icon {
+  transform: translateY(9%);
+}
+
+.hero .cta-group .desc {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.66;
 }

@@ -7,6 +7,7 @@
   --secondary-color: #5f5b53;
   --third-color: #fff;
   --fourth-color: #fffcf4;
+  --fifth-color: #ffb900;
   --font-heading: "Sen", sans-serif;
 }
 
@@ -46,10 +47,7 @@ a {
 .heading {
   color: #171100;
   font-family: var(--font-heading);
-  font-size: 5.8rem;
   font-weight: 700;
-  line-height: 1.17;
-  letter-spacing: -0.02em;
 }
 
 /* ======= Header ======= */
@@ -147,7 +145,7 @@ a {
   width: 470px;
   height: 685px;
   border-radius: 20px;
-  object-fit: cover;
+  vertical-align: bottom;
 }
 
 .hero .media-block .cards {
@@ -158,7 +156,7 @@ a {
   flex-direction: column;
   gap: 22px;
   width: 270px;
-  padding: 28px 24px;
+  padding: 24px;
   border-radius: 12px;
   background: var(--third-color);
 }
@@ -213,6 +211,11 @@ a {
   line-height: 1.66;
 }
 
+.hero .heading.lv1 {
+  font-size: 5.8rem;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+}
 .hero .content-block .desc-skills {
   margin-top: 22px;
 }
@@ -224,12 +227,12 @@ a {
   margin-top: 38px;
 }
 
-.hero .content-block .see-courses-btn {
+.hero .content-block .see-courses-cta {
   min-width: 180px;
   padding: 17px 34px;
   border-radius: 32px;
   color: #fff;
-  background: #ffb900;
+  background: var(--fifth-color);
   text-align: center;
   font-size: 1.8rem;
   font-weight: 600;
@@ -281,4 +284,143 @@ a {
 
 .hero .desc-stats strong.value:nth-of-type(2) {
   margin-left: 28px;
+}
+
+/* ======= Popuplar Courses ======= */
+.popular-courses {
+  margin-top: 200px;
+}
+
+.popular-courses .heading.lv2 {
+  font-size: 3.8rem;
+  line-height: 1.26;
+  letter-spacing: -0.02em;
+}
+
+.popular-courses .row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular-courses .desc {
+  color: #5f5b53;
+  font-weight: 400;
+}
+
+.popular-courses .desc-1 {
+  margin-top: 16px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.66;
+  width: 458px;
+}
+
+.popular-courses .row-top-right {
+  display: flex;
+  gap: 13px;
+}
+
+.popular-courses .control-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 999px;
+  border: 2px solid var(--fifth-color);
+  cursor: pointer;
+}
+
+.popular-courses .back-cta {
+  background: transparent;
+  color: var(--fifth-color);
+}
+
+.popular-courses .next-cta {
+  color: #fff;
+  background-color: var(--fifth-color);
+}
+
+.course-list {
+  display: flex;
+  gap: 30px;
+}
+.course-list .course {
+  width: 370px;
+  height: 466px;
+  margin-top: 55px;
+  border-radius: 12px;
+  box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+}
+
+.course .thumbnail img {
+  width: 370px;
+  height: 278px;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.course .body {
+  padding: 16px 22px;
+}
+
+.course .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course .head .title {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.66;
+}
+
+.course .head .rating {
+  display: flex;
+  gap: 6px;
+}
+
+.course-list .head .value {
+  color: #fea31b;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.course-list .desc-2 {
+  font-size: 1.4rem;
+  line-height: 1.85;
+  margin-top: 6px;
+}
+
+.course .foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.course .price {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.66;
+}
+
+.course .book-now-btn {
+  min-width: 118px;
+  padding: 12px 24px;
+  border-radius: 25px;
+  background: var(--fifth-color);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.85;
+}
+
+.course:not(.course:first-child) .book-now-btn {
+  background: var(--primary-color);
 }

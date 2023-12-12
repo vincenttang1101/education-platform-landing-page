@@ -9,6 +9,8 @@
   --fourth-color: #fffcf4;
   --fifth-color: #ffb900;
   --font-heading: "Sen", sans-serif;
+
+  --line-clamp: 1;
 }
 
 html {
@@ -48,6 +50,17 @@ a {
   color: #171100;
   font-family: var(--font-heading);
   font-weight: 700;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  overflow: hidden;
+}
+
+.word-break-all {
+  word-break: break-all;
 }
 
 /* ======= Header ======= */
@@ -369,26 +382,30 @@ a {
   padding: 16px 22px;
 }
 
-.popular-courses .course-item .head,
+.popular-courses .head,
 .popular-courses .course-item .foot {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.popular-courses .course-item .head .title {
+.popular-courses .head .title {
   color: var(--primary-color);
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.66;
 }
 
-.popular-courses .course-item .head .rating {
+.popular-courses .head .rating {
   display: flex;
   gap: 6px;
 }
 
-.popular-courses .course-list .head .value {
+.popular-courses .head .star-icon {
+  margin-left: 15px;
+}
+
+.popular-courses .head .value {
   color: #fea31b;
   font-size: 1.6rem;
   font-weight: 400;
@@ -413,6 +430,7 @@ a {
 }
 
 .popular-courses .course-item .book-now-btn {
+  margin-left: 15px;
   min-width: 118px;
   padding: 12px 24px;
   border-radius: 25px;

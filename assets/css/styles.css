@@ -452,14 +452,22 @@ a {
   background: #2e2100;
 }
 
+.feedback .feedback-list {
+  display: flex;
+  overflow: hidden;
+}
+
 .feedback .feedback-item {
   display: flex;
+  flex-shrink: 0;
+  width: 100%;
 }
 
 .feedback .avatar {
   width: 72px;
   height: 72px;
   border-radius: 72px;
+  object-fit: cover;
 }
 
 .feedback .title {
@@ -479,25 +487,6 @@ a {
   line-height: 1.85;
 }
 
-.feedback .dots {
-  display: flex;
-  gap: 6px;
-  margin-top: 28px;
-}
-
-.feedback .dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #634700;
-  cursor: pointer;
-}
-
-.feedback .dot.active {
-  background: var(--fifth-color);
-  cursor: default;
-}
-
 .feedback .content {
   width: 66%;
   margin-left: auto;
@@ -515,4 +504,24 @@ a {
   font-style: italic;
   font-weight: 400;
   line-height: 1.53;
+}
+
+.feedback .dots {
+  position: relative;
+  top: -18px;
+  display: flex;
+  gap: 6px;
+}
+
+.feedback .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+
+.feedback .dot.active {
+  background: var(--fifth-color);
+  cursor: default;
 }

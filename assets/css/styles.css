@@ -452,7 +452,6 @@ a {
   background: #2e2100;
 }
 
-<<<<<<< HEAD
 .feedback .feedback-list {
   display: flex;
   overflow: hidden;
@@ -462,20 +461,13 @@ a {
   display: flex;
   flex-shrink: 0;
   width: 100%;
-=======
-.feedback .feedback-item {
-  display: flex;
->>>>>>> 613aa06 (Built feedback)
 }
 
 .feedback .avatar {
   width: 72px;
   height: 72px;
   border-radius: 72px;
-<<<<<<< HEAD
   object-fit: cover;
-=======
->>>>>>> 613aa06 (Built feedback)
 }
 
 .feedback .title {
@@ -495,28 +487,6 @@ a {
   line-height: 1.85;
 }
 
-<<<<<<< HEAD
-=======
-.feedback .dots {
-  display: flex;
-  gap: 6px;
-  margin-top: 28px;
-}
-
-.feedback .dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #634700;
-  cursor: pointer;
-}
-
-.feedback .dot.active {
-  background: var(--fifth-color);
-  cursor: default;
-}
-
->>>>>>> 613aa06 (Built feedback)
 .feedback .content {
   width: 66%;
   margin-left: auto;
@@ -535,7 +505,6 @@ a {
   font-weight: 400;
   line-height: 1.53;
 }
-<<<<<<< HEAD
 
 .feedback .dots {
   position: relative;
@@ -556,5 +525,3 @@ a {
   background: var(--fifth-color);
   cursor: default;
 }
-=======
->>>>>>> 613aa06 (Built feedback)

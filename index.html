@@ -304,40 +304,121 @@
       <!-- Feedback -->
       <div class="feedback">
         <div class="main-content">
-          <!-- Feedback Item 1 -->
-          <div class="feedback-item">
-            <!-- Info -->
-            <div class="info">
-              <img
-                src="./assets/img/avatar-feedback-1.jpg"
-                alt="Avatar"
-                class="avatar"
-              />
-              <p class="title">Peter Moor</p>
-              <p class="desc">Student of Web Design</p>
-              <div class="dots">
-                <span class="dot"></span>
-                <span class="dot active"></span>
-                <span class="dot"></span>
+          <!-- Feedback List -->
+          <div class="feedback-list">
+            <!-- Feedback Item 1 -->
+            <div class="feedback-item">
+              <!-- Info -->
+              <div class="info">
+                <img
+                  src="./assets/img/avatar-feedback-1.jpg"
+                  alt="Avatar"
+                  class="avatar"
+                />
+                <p class="title">Peter Moor</p>
+                <p class="desc">Student of Web Design</p>
+              </div>
+              <!-- Content -->
+              <div class="content">
+                <img
+                  src="./assets/icons/open-quotes.svg"
+                  alt="Open Quotes"
+                  class="open-quotes"
+                />
+                <blockquote>
+                  Not only does my resume look impressive—filled with the names
+                  and logos of world-class institutions—but these certificates
+                  also bring me closer to my career goals by validating the
+                  skills I've learned."
+                </blockquote>
               </div>
             </div>
-            <!-- Content -->
-            <div class="content">
-              <img
-                src="./assets/icons/open-quotes.svg"
-                alt="Open Quotes"
-                class="open-quotes"
-              />
-              <blockquote>
-                Not only does my resume look impressive—filled with the names
-                and logos of world-class institutions—but these certificates
-                also bring me closer to my career goals by validating the skills
-                I've learned."
-              </blockquote>
+
+            <!-- Feedback Item 2 -->
+            <div class="feedback-item">
+              <!-- Info -->
+              <div class="info">
+                <img
+                  src="./assets/img/avatar-feedback-2.jpg"
+                  alt="Avatar"
+                  class="avatar"
+                />
+                <p class="title">Peter Moor</p>
+                <p class="desc">Student of Web Design</p>
+              </div>
+              <!-- Content -->
+              <div class="content">
+                <img
+                  src="./assets/icons/open-quotes.svg"
+                  alt="Open Quotes"
+                  class="open-quotes"
+                />
+                <blockquote>
+                  Not only does my resume look impressive—filled with the names
+                  and logos of world-class institutions—but these certificates
+                  also bring me closer to my career goals by validating the
+                  skills I've learned."
+                </blockquote>
+              </div>
             </div>
+
+            <!-- Feedback Item 3 -->
+            <div class="feedback-item">
+              <!-- Info -->
+              <div class="info">
+                <img
+                  src="./assets/img/avatar-feedback-3.jpg"
+                  alt="Avatar"
+                  class="avatar"
+                />
+                <p class="title">Peter Moor</p>
+                <p class="desc">Student of Web Design</p>
+              </div>
+              <!-- Content -->
+              <div class="content">
+                <img
+                  src="./assets/icons/open-quotes.svg"
+                  alt="Open Quotes"
+                  class="open-quotes"
+                />
+                <blockquote>
+                  Not only does my resume look impressive—filled with the names
+                  and logos of world-class institutions—but these certificates
+                  also bring me closer to my career goals by validating the
+                  skills I've learned."
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
           </div>
         </div>
       </div>
+
+      <script>
+        const dots = document.querySelectorAll(".feedback .dots .dot");
+        const feedbackItems = document.querySelectorAll(
+          ".feedback .feedback-item"
+        );
+
+        dots.forEach((dot, dotIndex) => {
+          const stt = dotIndex;
+
+          dot.addEventListener("click", () => {
+            feedbackItems.forEach((feedback) => {
+              feedback.style.cssText = `
+                transform: translateX(calc(${stt} * -100%)
+              `;
+            });
+
+            dots.forEach((dot) => dot.classList.remove("active"));
+            dots[dotIndex].classList.add("active");
+          });
+        });
+      </script>
     </main>
   </body>
 </html>

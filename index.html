@@ -398,27 +398,64 @@
         </div>
       </div>
 
-      <script>
-        const dots = document.querySelectorAll(".feedback .dots .dot");
-        const feedbackItems = document.querySelectorAll(
-          ".feedback .feedback-item"
-        );
-
-        dots.forEach((dot, dotIndex) => {
-          const stt = dotIndex;
-
-          dot.addEventListener("click", () => {
-            feedbackItems.forEach((feedback) => {
-              feedback.style.cssText = `
-                transform: translateX(calc(${stt} * -100%)
-              `;
-            });
-
-            dots.forEach((dot) => dot.classList.remove("active"));
-            dots[dotIndex].classList.add("active");
-          });
-        });
-      </script>
+      <!-- Features -->
+      <div class="features">
+        <div class="main-content">
+          <div class="body">
+            <!-- Images -->
+            <div class="images">
+              <img
+                src="./assets/img/feature-1.jpg"
+                alt="Learner outcomes through our awesome platform"
+                class="lowest"
+              />
+              <img
+                src="./assets/img/feature-2.jpg"
+                alt="Learner outcomes through our awesome platform"
+                class="highest"
+              />
+            </div>
+            <!-- Content -->
+            <div class="content">
+              <div class="info">
+                <h2 class="heading lv2">
+                  Learner outcomes through our awesome platform
+                </h2>
+                <p class="desc">
+                  87% of people learning for professional development report
+                  career benefits like getting a promotion, a raise, or starting
+                  a new career.
+                </p>
+                <p class="desc">Lesson Impact Report (2022)</p>
+              </div>
+              <a href="" class="btn sign-up-btn">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+
+    <script>
+      const dots = document.querySelectorAll(".feedback .dots .dot");
+      const feedbackItems = document.querySelectorAll(
+        ".feedback .feedback-item"
+      );
+
+      dots.forEach((dot, dotIndex) => {
+        const stt = dotIndex;
+
+        dot.addEventListener("click", () => {
+          feedbackItems.forEach((feedback) => {
+            feedback.style.cssText = `
+              transform: translateX(calc(${stt} * -100%));
+              transition: all ease 0.3s;
+            `;
+          });
+
+          dots.forEach((dot) => dot.classList.remove("active"));
+          dots[dotIndex].classList.add("active");
+        });
+      });
+    </script>
   </body>
 </html>

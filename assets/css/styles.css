@@ -305,7 +305,7 @@ a {
   margin-top: 200px;
 }
 
-.popular-courses .row-top {
+.popular-courses .main-content > .head {
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -715,20 +715,20 @@
       });
 
       /* Blog */
-      const dotsBlog = document.querySelectorAll(".blog .dots .dot");
-      const blogs = document.querySelectorAll(".blog .blog-list .blog-item");
+      const dotsOfBlog = document.querySelectorAll(".blog .dots .dot");
+      const blogList = document.querySelector(".blog .blog-list");
+      const blogItemWidth = document.querySelector(
+        ".blog .blog-list .blog-item"
+      ).clientWidth;
+      const gapOfBlogList = parseInt(getComputedStyle(blogList).gap);
 
-      dotsBlog.forEach((dot, index) => {
+      dotsOfBlog.forEach((dot, index) => {
         dot.addEventListener("click", () => {
-          blogs.forEach((blog) => {
-            blog.style.cssText = `
-            transform: translateX(calc(${index} * -300%));
+          blogList.style.cssText = `
+            transform: translateX(calc(${blogItemWidth}px * 3 + ${gapOfBlogList}px * 2));
             transition: all ease 0.3s;
-            `;
-          });
-
-          dotsBlog.forEach((dot) => dot.classList.remove("active"));
-          console.log(dot);
+          `;
+          dotsOfBlog.forEach((dot) => dot.classList.remove("active"));
           dot.classList.add("active");
         });
       });

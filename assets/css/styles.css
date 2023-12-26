@@ -634,11 +634,14 @@ a {
   margin-top: 55px;
   display: flex;
   gap: 30px;
+  overflow: hidden;
 }
 
 .blog .blog-list .blog-item {
-  background: var(--third-color);
+  width: calc(33.33% - 20px);
+  flex-shrink: 0;
   border-radius: 16px;
+  background: var(--third-color);
 }
 
 .blog .blog-list .blog-item:hover {
@@ -711,5 +714,26 @@ a {
 }
 
 .blog .blog-list .read-more-btn:hover {
+  background: var(--fifth-color);
+}
+
+.blog .dots {
+  margin-top: 38px;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.blog .dots .dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: var(--secondary-color);
+}
+
+.blog .dots .dot.active {
+  cursor: default;
   background: var(--fifth-color);
 }

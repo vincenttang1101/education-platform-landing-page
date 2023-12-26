@@ -462,6 +462,7 @@
       <!-- Blog -->
       <div class="blog">
         <div class="main-content">
+          <!-- Head -->
           <div class="head">
             <h2 class="heading lv2">Our blog</h2>
             <p class="desc">
@@ -469,6 +470,8 @@
               and travel
             </p>
           </div>
+
+          <!-- Blog List -->
           <div class="blog-list">
             <!-- Blog Item 1 -->
             <div class="blog-item">
@@ -489,6 +492,7 @@
                 <a href="#!" class="btn read-more-btn">Read More</a>
               </div>
             </div>
+
             <!-- Blog Item 2 -->
             <div class="blog-item">
               <a href="#!">
@@ -508,6 +512,7 @@
                 <a href="#!" class="btn read-more-btn">Read More</a>
               </div>
             </div>
+
             <!-- Blog Item 3 -->
             <div class="blog-item">
               <a href="#!">
@@ -527,30 +532,173 @@
                 <a href="#!" class="btn read-more-btn">Read More</a>
               </div>
             </div>
+
+            <!-- Blog Item 4 -->
+            <div class="blog-item">
+              <a href="#!">
+                <img
+                  src="./assets/img/blog-4.jpg"
+                  alt="How to become a pro web designer in 2022 and get remot job?"
+                  class="thumbnail"
+                />
+              </a>
+              <div class="info">
+                <span class="date">21 November 2021</span>
+                <h3 class="title">
+                  <a href="#!">
+                    How to become a pro web designer in 2022 and get remot job?
+                  </a>
+                </h3>
+                <a href="#!" class="btn read-more-btn">Read More</a>
+              </div>
+            </div>
+
+            <!-- Blog Item 5 -->
+            <div class="blog-item">
+              <a href="#!">
+                <img
+                  src="./assets/img/blog-5.jpg"
+                  alt="How to become a pro web designer in 2022 and get remot job?"
+                  class="thumbnail"
+                />
+              </a>
+              <div class="info">
+                <span class="date">21 November 2021</span>
+                <h3 class="title">
+                  <a href="#!">
+                    How to become a pro web designer in 2022 and get remot job?
+                  </a>
+                </h3>
+                <a href="#!" class="btn read-more-btn">Read More</a>
+              </div>
+            </div>
+
+            <!-- Blog Item 6 -->
+            <div class="blog-item">
+              <a href="#!">
+                <img
+                  src="./assets/img/blog-6.jpg"
+                  alt="How to become a pro web designer in 2022 and get remot job?"
+                  class="thumbnail"
+                />
+              </a>
+              <div class="info">
+                <span class="date">21 November 2021</span>
+                <h3 class="title">
+                  <a href="#!">
+                    How to become a pro web designer in 2022 and get remot job?
+                  </a>
+                </h3>
+                <a href="#!" class="btn read-more-btn">Read More</a>
+              </div>
+            </div>
+
+            <!-- Blog Item 7 -->
+            <div class="blog-item">
+              <a href="#!">
+                <img
+                  src="./assets/img/blog-7.jpg"
+                  alt="How to become a pro web designer in 2022 and get remot job?"
+                  class="thumbnail"
+                />
+              </a>
+              <div class="info">
+                <span class="date">21 November 2021</span>
+                <h3 class="title">
+                  <a href="#!">
+                    How to become a pro web designer in 2022 and get remot job?
+                  </a>
+                </h3>
+                <a href="#!" class="btn read-more-btn">Read More</a>
+              </div>
+            </div>
+
+            <!-- Blog Item 8 -->
+            <div class="blog-item">
+              <a href="#!">
+                <img
+                  src="./assets/img/blog-8.jpg"
+                  alt="How to become a pro web designer in 2022 and get remot job?"
+                  class="thumbnail"
+                />
+              </a>
+              <div class="info">
+                <span class="date">21 November 2021</span>
+                <h3 class="title">
+                  <a href="#!">
+                    How to become a pro web designer in 2022 and get remot job?
+                  </a>
+                </h3>
+                <a href="#!" class="btn read-more-btn">Read More</a>
+              </div>
+            </div>
+
+            <!-- Blog Item 9 -->
+            <div class="blog-item">
+              <a href="#!">
+                <img
+                  src="./assets/img/blog-9.jpg"
+                  alt="How to become a pro web designer in 2022 and get remot job?"
+                  class="thumbnail"
+                />
+              </a>
+              <div class="info">
+                <span class="date">21 November 2021</span>
+                <h3 class="title">
+                  <a href="#!">
+                    How to become a pro web designer in 2022 and get remot job?
+                  </a>
+                </h3>
+                <a href="#!" class="btn read-more-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dots -->
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
           </div>
         </div>
       </div>
     </main>
 
     <script>
+      /* Features */
       const dots = document.querySelectorAll(".feedback .dots .dot");
-      const feedbackItems = document.querySelectorAll(
-        ".feedback .feedback-item"
-      );
+      const feedbacks = document.querySelectorAll(".feedback .feedback-item");
 
-      dots.forEach((dot, dotIndex) => {
-        const stt = dotIndex;
-
+      dots.forEach((dot, index) => {
         dot.addEventListener("click", () => {
-          feedbackItems.forEach((feedback) => {
+          feedbacks.forEach((feedback) => {
             feedback.style.cssText = `
-              transform: translateX(calc(${stt} * -100%));
+              transform: translateX(calc(${index} * -100%));
               transition: all ease 0.3s;
             `;
           });
 
           dots.forEach((dot) => dot.classList.remove("active"));
-          dots[dotIndex].classList.add("active");
+          dot.classList.add("active");
+        });
+      });
+
+      /* Blog */
+      const dotsBlog = document.querySelectorAll(".blog .dots .dot");
+      const blogs = document.querySelectorAll(".blog .blog-list .blog-item");
+
+      dotsBlog.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          blogs.forEach((blog) => {
+            blog.style.cssText = `
+            transform: translateX(calc(${index} * -300%));
+            transition: all ease 0.3s;
+            `;
+          });
+
+          dotsBlog.forEach((dot) => dot.classList.remove("active"));
+          console.log(dot);
+          dot.classList.add("active");
         });
       });
     </script>

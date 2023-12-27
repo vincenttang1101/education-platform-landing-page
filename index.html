@@ -717,17 +717,26 @@
       /* Blog */
       const dotsOfBlog = document.querySelectorAll(".blog .dots .dot");
       const blogList = document.querySelector(".blog .blog-list");
+      const blogItems = document.querySelectorAll(".blog .blog-item");
       const blogItemWidth = document.querySelector(
         ".blog .blog-list .blog-item"
       ).clientWidth;
       const gapOfBlogList = parseInt(getComputedStyle(blogList).gap);
 
       dotsOfBlog.forEach((dot, index) => {
+        const itemQnt = index * 3;
         dot.addEventListener("click", () => {
-          blogList.style.cssText = `
-            transform: translateX(calc(${blogItemWidth}px * 3 + ${gapOfBlogList}px * 2));
-            transition: all ease 0.3s;
-          `;
+          blogItems.forEach((blogItem) => {
+            /* Note 
+              Distance = Item width x Item quantity + gap x Item quantity
+              But when shifting, it changes to a negative number
+              => - (Item width x 3 + gap x 3)
+            */
+            blogItem.style.cssText = `
+              transform: translateX(calc(-${itemQnt}00% - ${gapOfBlogList}px * ${itemQnt}));
+              transition: all ease 0.3s;
+            `;
+          });
           dotsOfBlog.forEach((dot) => dot.classList.remove("active"));
           dot.classList.add("active");
         });
